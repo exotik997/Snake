@@ -10,6 +10,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            //Отрисовка рамки
             Console.SetWindowSize(150, 40);
             Console.SetBufferSize(150, 40);
             HorizontalLine top = new HorizontalLine(0, 149, 0, '_');
@@ -21,8 +22,10 @@ namespace Snake
             left.Draw();
             right.Draw();
 
-            Point p = new Point (45, 20, '#');
-            p.Draw();
+            //Отрисовка змейки
+            Point p = new Point (4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
 
 
             Console.ReadLine();
