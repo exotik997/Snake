@@ -16,21 +16,10 @@ namespace Snake
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-            List<int> numList = new List<int>();
-            numList.Add(15);
-            numList.Add(23);
-            numList.Add(19);
-
-            foreach (int i in numList)
-            {
-                Console.WriteLine(i);
-            }
-
-            numList.RemoveAt(0);
-
-            List<Point> plist = new List<Point>();
-            plist.Add(p1);
-            plist.Add(p2);
+            HorizontalLine Hline = new HorizontalLine(1, 10, 7, '#');
+            Hline.Draw();
+            VerticalLine Vline = new VerticalLine(1, 10, 13, '#');
+            Vline.Draw();
 
             Console.ReadLine();
         }
